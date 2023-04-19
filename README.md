@@ -1,2 +1,2 @@
 # html-css
- Repositorio usado durante o treinamento de HTML/CSS
+ Repositorio usado durante o treinamento de HTML_CSS
