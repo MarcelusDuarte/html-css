@@ -9,10 +9,19 @@
 <body>
    <h1>Imagem dinâmica</h1> 
    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do navegador</p>
-   <picture>
+   <picture><!-- usando o parametro MAX-WIDTH, comece o menor arquivo para o maior. A maior imagem usa a tag IMG. A ordem pode ser invertida se usar o comando MIN-WIDTH -->
     <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
     <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
     <img src="imagens/foto-g.png" alt="Imagem flexível">
    </picture>
+   <h1>Reproduzindo audio</h1>
+   <p>Vamos aprender a reproduzir audio no HTML5</p>
+   <!-- <audio src="midia/happy-mistake.mp3" autoplay controls></audio> Uma das formas de carregar audio no HTML5--> 
+   <audio preload="metadata" autoplay controls loop> <!-- no preload, não usar AUTO. Deixa o site lento. Principalmente em celular -->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav"> <!-- Evitar usar a extensão WAV pois é muito grande e torna a navegação lenta -->
+        <p>Infelizmente seu navegador não consegue reproduzir o audio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+   </audio>
 </body>
 </html>
