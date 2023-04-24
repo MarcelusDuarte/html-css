@@ -1,0 +1,19 @@
+@charset "UTF-8"; /* tudo que começa com @ é uma regra. Essa é para evitar problemas com acentuação e alguns caracteres */
+/* Maneira mais versátil para a construção de sites*/
+body{
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+h1{
+    color: maroon;
+    background-color: goldenrod;
+    font-size: 1.5em;
+}
+h2{
+    color: darkred;
+    font-size: 1.2em;
+}
+p{
+    text-align: justify;
+}
