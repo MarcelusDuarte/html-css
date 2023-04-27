@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes</title>
+    <style>
+        div{
+            display: inline-block; /* deixa as divs lado a lado */
+            background-color: lightgray;
+            border: 1px solid black; /* cria uma borda de 1px de espessura, solida e da cor preta no espaço demarcado pelos parametros height e width */
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+        /* As pseudoclasses : são relacionadas a um elemento ou a uma classe. Relacionam o estado de um determinado elemento */
+
+        div:hover{ /* hover -> significa que quando passar o mouse por cima o elemento executa uma ação */
+         background-color: yellow;  /* quando passar o mouse sobre, fica amarelo. Muda o estado momentaneamente */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>
