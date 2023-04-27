@@ -6,27 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de Caixas</title>
     <style>
-        h1{
+        h1{/* box-level */
             background-color: lightgray;
             height: 300px;
             width: 300px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: darkslategray;
 
-            padding-top: 10px;
-            padding-right: 10px;
-            padding-bottom: 10px;
-            padding-left: 10px;
-        }
-        a{
-            border-width: 10px;
+            /*border-width: 10px;
             border-style: solid;
-            border-color: red;
-            padding-top: 10px;
+            border-color: darkslategray;*/
+
+            border: 10px solid darkslategray; /* shorthand para simplificar as 3 linhas anteriores. Deve-se manter sempre essa ordem!! */
+
+            /*padding-top: 10px;
             padding-right: 10px;
             padding-bottom: 10px;
-            padding-left: 10px;
+            padding-left: 10px;*/
+
+            padding: 10px 10px 10px 10px;/* shorthand para simplificar as 4 linhas anteriores. Deve-se manter sempre essa ordem!! SE TODOS OS VALORES FOREM IGUAIS, PODEMOS INFORMAR APENAS 1 VEZ.*/
+            /* padding: 10px 20px; => vai aplicando os valores seguindo o sentido dos ponteiros do relogio. */
+            
+            /*margin: auto; => a margin auto centraliza a caixa no meio da tela, independente do tamanho da viewport */
+
+            /*margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px ;
+            margin-left: 20px;*/
+
+            margin: 20px 20px 40px 20px; /* para centralizar, colocar AUTO nos valores right e left  */
+
+            /*outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;*/
+
+            outline: 5px dashed salmon;
+          
+        }
+        a{/* inline-level */
+            /*border-width: 10px;
+            border-style: solid;
+            border-color: red;*/
+            border: 10px solid red;
+
+            /*padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;*/
+            padding: 10px;
         }
     </style>
 </head>
