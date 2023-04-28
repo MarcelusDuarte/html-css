@@ -22,7 +22,7 @@
         nav{
             background-color: rgb(86, 86, 86);
             padding: 3px;
-            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.374);; /* parametros: deslocamento horizontal, deslocamento vertical, espalhamento e sombra. Sempre que for trabalhar com sombras, coloca esses valores e ajusta no DevTools do chrome */
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);; /* parametros: deslocamento horizontal, deslocamento vertical, espalhamento e sombra. Sempre que for trabalhar com sombras, coloca esses valores e ajusta no DevTools do chrome */
         }
         nav > a{
             text-decoration: none;
@@ -38,6 +38,7 @@
             background-color: white;
             padding: 10px;
             margin: 10px;
+            border-radius: 10px 0px; /* Arredondamento dos cantos da caixa. Se os 4 cantos forem o mesmo valor, basta colocar 1 vez. Podemos colocar 2 valores (supesq = infdir e supdir = infesq) ou 4 valores diferentes. É possível acrescentar sombras */
         } 
         article{
             background-color: lightgray;
@@ -57,6 +58,13 @@
             margin: 0px;/* O navegador estava considerando a margin do paragrafo. Foi zerada para permitir o ajuste do padding do footer */
         }
 
+        div#bola{ /* Caso necessite criar uma disco */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body> <!-- No HTML5 é possível colocar qualquer Grouping Tag dentro de qualquer Grouping Tag. Este arquivo é só uma sugestão de uso. -->
@@ -90,5 +98,6 @@
      <footer>
         <p>Desenvolvido por Marcelus Duarte</p>
      </footer>
+     <div id="bola"></div> <!-- Caso necessite criar um disco na pagina -->
 </body>
 </html>
