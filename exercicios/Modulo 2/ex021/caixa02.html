@@ -16,9 +16,13 @@
             padding: 10px;
             margin: 10px;
         }
+        h1{
+            box-shadow: inset 2px 1px 14px 6px rgba(0, 0, 0, 0.421); /* o INSET cria sombra dentro da caixa. Para fazer sombra externa, basta tirar o INSET */
+        }
         nav{
             background-color: rgb(86, 86, 86);
             padding: 3px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.374);; /* parametros: deslocamento horizontal, deslocamento vertical, espalhamento e sombra. Sempre que for trabalhar com sombras, coloca esses valores e ajusta no DevTools do chrome */
         }
         nav > a{
             text-decoration: none;
@@ -34,7 +38,7 @@
             background-color: white;
             padding: 10px;
             margin: 10px;
-        }
+        } 
         article{
             background-color: lightgray;
             padding: 5px;
@@ -46,8 +50,11 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 1px;
+            padding: 4px;
             margin: 0px;
+        }
+        footer > p{
+            margin: 0px;/* O navegador estava considerando a margin do paragrafo. Foi zerada para permitir o ajuste do padding do footer */
         }
 
     </style>
