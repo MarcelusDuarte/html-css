@@ -42,20 +42,51 @@ body{
 }
 
 header {
-    background-color: var(--cor4);
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px; /* Criando espaço antes do h1 para deixar mais centralizado na vertical */
 }
 
 header > h1{
     color: white;
     font-family: var(--fonte-destaque);
+    /* tentamos criar espaço sobre o h1 usando o comando margin-top: 30px, mas a margem criada saiu do espaço do cabeçalho. Então vamos criar um padding-top no header */
+    font-size: 3em;
+    margin-bottom: 20px; /* Criou espaço entre o h1 e o paragrafo */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.195);
 }
 
 header > p{
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
     color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.195);
 }
 
 nav{
     background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.363);
+
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s; /* cria uma animação de 0.5s que o hover faz */
+}
+
+nav > a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
 }
 
 main{
