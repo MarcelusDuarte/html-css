@@ -9,9 +9,9 @@
 #063d1e
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* fonte importada do Google Fontes */
 @font-face {
-    font-family: 'Android';
+    font-family: 'Android';  /* Fonte salva na pasta do projeto */
     src: url('../fontes/idroid.otf') format('opentype'); /* url precisou do ../ porque a fonte está numa pasta acima e precisamos voltar ao nivel da raiz para entrar na pasta fontes */
     font-weight: normal;
 }
