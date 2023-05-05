@@ -56,6 +56,7 @@ header > h1 {
     font-family: var(--fonte-destaque);
     /* tentamos criar espaço sobre o h1 usando o comando margin-top: 30px, mas a margem criada saiu do espaço do cabeçalho. Então vamos criar um padding-top no header */
     font-size: 3em;
+    font-weight: normal;
     margin-bottom: 20px; /* Criou espaço entre o h1 e o paragrafo */
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.195);
 }
@@ -67,6 +68,7 @@ header > p {
     padding-right: 10px;
     padding-left: 10px;
     margin: auto;
+    margin-bottom: 20px;
     color: white;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.195);
 }
@@ -78,7 +80,7 @@ nav {
 }
 
 nav > a {
-    color: white;
+    color: var(--cor1);
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -106,12 +108,15 @@ main {
 main h1 {  
     color: var(--cor5);
     font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 main h2 {
     font-family: var(--fonte-android);
     color: var(--cor4);
     font-size: 1.3em;
+    font-weight: normal;
     background-image: linear-gradient(to right, var(--cor1), transparent);
     text-indent: 8px;
 }
@@ -124,6 +129,23 @@ main img.pequena {
     max-width: 350px;/* foi removida a porcentagem para que a imagem não fique pequena demais para telas de celulares e não embasse quando a tela for muito grande */
     display: block; /* Precisou transformar a imagem num bloco para poder centralizar. Imagem originalmente não é bloco e não centraliza apenas com o margin: auto */
     margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px; /* margem negativa para o backgroud colar no box nos dois lados */
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+
+}
+
+div.video > iframe {
+    position: absolute; /* quando usa posicionamento absoluto, conseguimos mexer com top e left */
+    top: 5%; /* distancia do topo do iframe ate o topo do box */
+    left: 5%; /* distancia da lateral esquerda do iframe ate a lateral esquerda do box */
+    width: 90%; /* Normalmente ficaria bagunçado, mas como está com valores em porcentagem, vai conseguir ficar alinhado */
+    height: 90%;
 }
 
 main p {
