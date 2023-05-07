@@ -188,7 +188,6 @@ aside > h3 {
     margin: -10px -10px 0px -10px; /* Margem negativa usada para crescer para fora */
     border-radius: 10px 10px 0px 0px;
     /* o padding, margin e border-radius criaram um bloco que se encaixou perfeitamente no bloco do aside, se sobrepondo */
-
 }
 
 aside > ul {
