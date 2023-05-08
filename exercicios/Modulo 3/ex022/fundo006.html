@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body{
             height: 100vh;
-            background-color: black;
+            /*background-color: black;
             background-image: url('imagens/wallpaper002.jpg');
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; /* se deixar 100%, aparece o fundo preto quando aumentar muito o navegador. Se colocar 100% 100%, a imagem vai distorcer quando mudar o tamanho da tela (SOLUÇAO PESSIMA). Podemos usar valor: contain ( mostra a imagem 100% exibida. Sem corte. Imagem redimensiona mas aparece o fundo). COVER vai fazer a imagem caber 100% na viewport mesmo que precise cortar as extremidades da imagem, sem distorções ou mostrando o fundo */
+            /*background-attachment: fixed;*/
+
+            /* Shorthand - background
+                color > image > position > repeat > size > attachment
+                respeitar essa ordem 
+                
+                Mesmo estando na especificação do W3C o SIZE constar no shorthand, ainda não funciona. Manter o size fora da shorthand!
+            */
+
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
+
+
         }
 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px; /* se aumentar o valor, faz o conteudo se adaptar a telas grandes e pequenas */
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
@@ -28,6 +41,11 @@
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab saepe suscipit, culpa, ex assumenda ullam cupiditate velit ducimus omnis repellendus reiciendis, eos pariatur. Cumque veniam placeat dolores dolorum! Non, quasi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit doloribus sapiente, exercitationem itaque illo asperiores quasi nemo veniam minus expedita! In mollitia tempora nesciunt quam aperiam dignissimos adipisci officiis repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus fuga a laboriosam perferendis odio, officiis repellendus suscipit. Nulla doloremque, expedita sapiente, dolores exercitationem porro omnis, minus iusto et repudiandae odio.</p>
     </main>
 </body>
