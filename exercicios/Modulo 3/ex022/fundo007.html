@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{ /* podemos usar tambem section#container */
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: relative;
+            height: 97vh;
+            background-color: purple;
+            padding: 10px;
+        }
+
+        #conteudo{ /* podemos usar tambem article#conteudo */
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            position: absolute; /* usando essa propriedade no conteudo, podemos utilizar as propriedades LEFT e TOP */
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            /*margin: auto; /* maneira mais pratica de centralizar o conteudo horizontalmente */
+            left: 50%; /* podemos trabalhar com pixels fixos ou porcentagem */
+            top: 50%; /* podemos trabalhar com pixels fixos ou porcentagem */
+
+            transform: translate(-50%, -50%); /* valores negativos: mexe com a caixa conteudo para a esq e para cima. Assim conseguimos centralizar as duas caixas (container e conteudo) */
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html> 
