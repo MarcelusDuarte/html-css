@@ -72,13 +72,36 @@ section.normal {
 section.imagem {
     background-color: rgb(51, 51 ,51);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);/* 6px comprimento horizontal, 6px comprimento vertical, 13px de espalhamento, 0px de ampliação, cor preta */
+    background-size: cover;
+    background-attachment: fixed; /* não é melhor forma de fazer mas funciona. A imagem ocupa o tamanho completo do site. Fixa as imagens de fundo para criar o efeito paralax*/
 }
 
 section.imagem > p { /* para a imagem não se confundir com o texto caso coincida a imagem com partes brancas sob as letras brancas */
     /*width: 400px;*/ /* se mantiver fixo, a caixa não se adapta junto com o texto e deforma o conteúdo */
     display: inline-block; /* caixa que se adapta ao tamanho do conteúdo */
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(0, 0, 0, 0.514);
     padding: 10px;/* afasta o conteúdo das margens da caixa */
+    text-shadow: 1px 1px 0px black;
+    
+    
+}
+
+section > p {
+    padding-bottom: 2em; /* para separar as septilhas que estão juntas */
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    /*background-size: cover;  -> como é o mesmo ajuste nas duas imagens, podemos remover e colocar no section imagem que cobre as duas*/
+
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    /*background-size: cover; -> como é o mesmo ajuste nas duas imagens, podemos remover e colocar no section imagem que cobre as duas*/
+
 }
 
 footer {
