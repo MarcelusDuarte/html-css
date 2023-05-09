@@ -10,7 +10,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         table {
-            width: 500px;
+            width: 500px; /* como a largura da coluna POPULAÇÃO foi definida pontualmente em 100px, então a largura da coluna ESTADO passa a ser automaticamente de 400px */
             border-collapse: collapse;
         }
         td, th {
@@ -26,6 +26,13 @@
         td.num {
             text-align: right;
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
@@ -33,18 +40,22 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+            CAPTION = legenda da tabela -> não tem tr, td, th
             THEAD
                 TR, TD, TH
             TBODY
                 TR, TD, TH
             TFOOT
                 TR, TD, TH
+            
+        importante definir corretamente quem é TH(título) e quem é TD(dado) devido a semântica do HTML5.
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- Onde estão os estados referidos por esse th? na mesma coluna. Então o scope é COL -->
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -159,7 +170,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th> <!-- Onde está o total de habitantes referidos por esse th? na mesma linha. Então o scope é ROW -->
                 <td class="num"><strong>207 883 699</strong></td>
             </tr>
         </tfoot>
