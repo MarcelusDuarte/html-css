@@ -2,14 +2,28 @@
 
 /* sempre configurar o CSS mantendo a mesma estrutura do HTML. Fica mais facil de organizar */
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root { /* criando as variaveis para as fontes usadas no projeto */
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 * { /* configuração geral para resetar todos os elementos */
     margin: 0px;
     padding: 0px;
+    font-size: 1em ;
 }
+
 
 html, body {
     min-height: 100vh; /* tamanho minimo da altura do corpo vai ser o tamanho da viewport */
     background-color: darkgray;
+    font-family: var(--fonte1); /* fonte padrão */
+    
 }
 
 header {
@@ -22,6 +36,8 @@ header > h1 {
     padding-top: 50px;
     /*text-transform: uppercase; -> joga todas as letras para maiuscula */ 
     font-variant: small-caps; /* Letras continuam maiusculas, mas ele destaca as primeiras letras. Fica mais suave. */
+    font-family: var(--fonte2); /* fonte do título */
+    font-size: 10vw; /* não é a melhor maneira mas funciona. Melhor usar media queure */
 }
 
 header > p {
@@ -44,6 +60,8 @@ section {/* configuração que serve para todas as sections ( normal e imagem ) 
     /* ganha espaço dentro das sections para criar conteudo ocupar mais espaço e criar o efeito paralax */
     line-height: 2em; /* aumenta o espaço entre as linhas para facilitar a leitura */
     padding-left: 30px;
+    font-family: var(--fonte3); /* fonte para todo o conteúdo */
+    font-size: 3.5vw; /* não é a melhor maneira mas funciona. Melhor usar media queure */
 }
 
 section.normal {
@@ -57,8 +75,10 @@ section.imagem {
 }
 
 section.imagem > p { /* para a imagem não se confundir com o texto caso coincida a imagem com partes brancas sob as letras brancas */
-    width: 400px;
+    /*width: 400px;*/ /* se mantiver fixo, a caixa não se adapta junto com o texto e deforma o conteúdo */
+    display: inline-block; /* caixa que se adapta ao tamanho do conteúdo */
     background-color: rgba(0, 0, 0, 0.253);
+    padding: 10px;/* afasta o conteúdo das margens da caixa */
 }
 
 footer {
