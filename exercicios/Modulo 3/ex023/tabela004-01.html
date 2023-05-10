@@ -34,13 +34,13 @@
             Filmes Favoritos
         </caption>
         <thead>
-            <th>Grupos</th>
-            <th>Nomes</th>
-            <th colspan="3">Filmes</th> <!-- Pode começar colocando logo a expansão. Quando forem sendo adicionados os tds nas linhas abaixo, ele vai expandindo automaticamente -->
+            <th scope="col">Grupos</th> <!-- Os dados desse grupo estão em 1 coluna -->
+            <th scope="col">Nomes</th>
+            <th colspan="3" scope="colgroup">Filmes</th> <!-- Pode começar colocando logo a expansão. Quando forem sendo adicionados os tds nas linhas abaixo, ele vai expandindo automaticamente. Scope é COLGROUP porque os dados de Filmes estão em 3 colunas -->
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th><!-- Pode começar colocando logo a expansão. Quando forem sendo adicionados os tds nas linhas abaixo, ele vai expandindo automaticamente -->
+                <th rowspan="3" scope="rowgroup">Mulheres</th><!-- Pode começar colocando logo a expansão. Quando forem sendo adicionados os tds nas linhas abaixo, ele vai expandindo automaticamente. Scope é ROWGROUP porque os dados de Mulheres estão em 3 linhas -->
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -59,7 +59,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th rowspan="3" scope="rowgroup">Homens</th>
                 <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>
@@ -78,7 +78,11 @@
                 <td>Toy Story</td>
             </tr>
         </tbody>
-        </tbody>
+        <tfoot> <!-- acrescentado para explicar scopos col, colgroup, row e rowgroup -->
+            <th colspan="4" scope="row">Total</th> <!-- O scope é ROW porque o dado dele é só uma celula seguinte, na mesma linha -->
+            <td>1000</td>
+        </tfoot>
+
     </table>
 </body>
 </html>
