@@ -23,6 +23,12 @@
             color: white;
         }
 
+        /* EFEITO ZEBRADO */
+        tbody > tr:nth-child(even) { /* EVEN -> PAR.   ODD -> IMPAR. Podemos usar 2n, para linhas pares ou 2n-1 para linhas impares */
+            background-color: lightgray;
+        /* podemos fazer configuração independente para linhas pares e impares. Se tiver imagem de fundo, podemos criar um background-color: white */    
+        }
+
         td.num {
             text-align: right;
         }
