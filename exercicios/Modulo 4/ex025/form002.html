@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"> <!--Usado POST para não aparecer os dados preenchidos na url-->
+        <p> <!--Poderia ser uma div, mas como não tem espaçamento bom, criamos um parágrafo-->
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do usuário" autocomplete="username"> <!--O REQUIRED é para evitar do formulário enviar dados em branco. So envia se preencher os campos. O SIZE indica que a caixa que vai aparecer so mostra até 10 caracteres. Se o dado tiver mais, eles vao se movendo para a esquerda (rolagem lateral)-->
+        </p>
+        <p>
+            <label for="isen">Senha</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="minimo 8 letras" autocomplete="current-password"><!--MINLENGTH e MAXLENGTH se referem a quantidade de caracteres que devem ser inputados-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
