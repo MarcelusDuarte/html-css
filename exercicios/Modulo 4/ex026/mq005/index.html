@@ -8,8 +8,9 @@
     <!-- linha do link do google fonts para inserir o icone do menu hamburguer -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span> <!-- Linha do Google fonts para inserir o icone do menu. Se alterar o nome "menu" por outros do site, o icone é alterado -->
@@ -41,6 +42,13 @@
                 itens.style.display = 'none'
             } else {
                 itens.style.display = 'block'
+            }
+        }
+        function mudouTamanho() { /* monitora o tamanho da tela para forçar a aparição dos itens do menu */
+            if (window.innerWidth >= 768) {
+               itens.style.display = 'block' 
+            } else {
+                itens.style.display = 'none'
             }
         }
     </script>
