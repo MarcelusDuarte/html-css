@@ -7,10 +7,10 @@
     <title>Media Queries</title>
     <!-- linha do link do google fonts para inserir o icone do menu hamburguer -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="estilos/style.css"> <!-- CSS Mobile First -->
+    <link rel="stylesheet" href="estilos/media-query.css"> <!-- CSS para configurar vários tamanhos de tela -->
 </head>
-<body onresize="mudouTamanho()">
+<body onresize="mudouTamanho()"> <!-- JS para monitorar comportamento em telas maiores -->
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span> <!-- Linha do Google fonts para inserir o icone do menu. Se alterar o nome "menu" por outros do site, o icone é alterado -->
