@@ -33,6 +33,10 @@
             flex-direction: column;
         }
 
+        .quebra {
+            flex-wrap: wrap;/*permite a quebra de linha. O elemento dentro do container volta a sua formatação normal (container não espreme os itens para caber)*/
+        }
+
         body {
             font-family: Arial;
             color: #000;
@@ -40,7 +44,7 @@
     </style>
 </head>
 <body>
-    <div class="container flexivel">
+    <div class="container flexivel quebra">
         <div class="item">CFB Cursos 1</div>
         <div class="item">CFB Cursos 2</div>
         <div class="item">CFB Cursos 3</div>
