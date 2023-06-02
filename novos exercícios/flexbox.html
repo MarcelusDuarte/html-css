@@ -18,12 +18,19 @@
         .container {
             max-width: 600px; /*sem essa propriedade utilizaria a linha inteira*/
             margin: 0 auto;
-            border: 1px solid #000;
-            
+            border: 1px solid #000; 
         }
 
         .flexivel {
             display: flex;
+        }
+
+        .horizontal { /*pode criar classe horizontal invertida, se quiser*/
+            flex-direction: row;
+        }
+
+        .vertical {/*pode criar classe vertical invertida, se quiser*/
+            flex-direction: column;
         }
 
         body {
