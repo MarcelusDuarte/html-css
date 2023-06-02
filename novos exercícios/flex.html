@@ -13,7 +13,6 @@
             text-align: center;
             font-size: 1em;
             color: #fff;
-
         }
 
         .container {
@@ -90,6 +89,16 @@
             flex-shrink: 2;
         }
 
+        .flex0 {
+            /*  flex-grow, flex-shrink, flex-basis  
+                    n           1           0       */
+            flex: 1;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
         body {
             font-family: Arial;
             color: #000;
@@ -98,10 +107,10 @@
 </head>
 <body>
     <div class="container flexivel horizontal">
-        <div class="item tam1 reduzir0">CFB Cursos 0</div>
-        <div class="item tam1 reduzir1">CFB Cursos 1</div>
-        <div class="item tam1 reduzir2">CFB Cursos 2</div>
-        <div class="item tam1 reduzir0">CFB Cursos 3</div>
+        <div class="item flex0">CFB</div>
+        <div class="item flex0">CFB Cursos</div>
+        <div class="item flex0">CFB Cursos CFB Cursos</div>
+        
     </div>
-</body>
+</body> 
 </html>
