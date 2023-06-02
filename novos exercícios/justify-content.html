@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .item {
+            margin: 5px;
+            padding: 5px;
+            background-color: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 600px; /*sem essa propriedade utilizaria a linha inteira*/
+            margin: 0 auto;
+            border: 1px solid #000; 
+            justify-content: space-around;
+            
+        }
+
+        .flexivel {
+            display: flex;
+        }
+
+        .horizontal { /*pode criar classe horizontal invertida, se quiser*/
+            flex-direction: row;
+        }
+
+        .vertical {/*pode criar classe vertical invertida, se quiser*/
+            flex-direction: column;
+        }
+
+        .quebra {
+            flex-wrap: wrap;/*permite a quebra de linha. O elemento dentro do container volta a sua formatação normal (container não espreme os itens para caber)*/
+        }
+
+        .fluxo-horizontal-quebra {/*padrão é row nowrap*/
+            flex-flow: row wrap;
+        }
+
+        body {
+            font-family: Arial;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flexivel horizontal quebra">
+        <div class="item">CFB Cursos 1</div>
+        <div class="item">CFB Cursos 2</div>
+        <div class="item">CFB Cursos 3</div>
+        
+
+    </div>
+</body>
+</html>
