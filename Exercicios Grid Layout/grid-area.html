@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        body {
+            font-family: arial;
+            color: #000;
+        }
+
+        .header {
+            grid-area: cabeçalho;
+        }
+
+        .main {
+            grid-area: principal;
+        }
+
+        .side { /* nome da classe */
+            grid-area: lateral;
+        }
+
+        .footer {
+            grid-area: rodape; /* nome da área */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px ;
+            grid-template-areas: 
+                "cabeçalho cabeçalho cabeçalho cabeçalho"
+                "principal principal . lateral"
+                "rodape rodape rodape rodape"
+            
+            ;
+        }
+
+        .item {
+            background-color: #048;
+            color: #FFF;
+            border: 1px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">HEADER</div>
+        <div class="item main">PRINCIPAL</div>
+        <div class="item side">LATERAL</div>
+        <div class="item footer">FOOTER</div>
+    </div>
+</body>
+</html>
